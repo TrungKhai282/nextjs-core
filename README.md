@@ -1,9 +1,11 @@
-This is the core app nextjs source
+This is a common source code for nextjs projects
 
-Install necessary depedency: npm i
-Run dev mode: npm run dev
-Build source: npm run build
-Run product mode: npm run start
+How to run app:
+
+- Install necessary depedency: npm i
+- Run dev mode: npm run dev
+- Build source: npm run build
+- Run product mode: npm run start
 
 Depedency:
 
