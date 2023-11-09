@@ -1,0 +1,52 @@
+@import '@/common/styles/common.scss';
+
+.button{
+    padding: 6px 15px;
+    font-size: $font_size_medium;
+    font-weight: normal;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &.outline{
+        border: 1px solid $color_basic_lightgrey;
+        background: $color_basic_white;
+        color: $color_text_default;
+
+        &:hover{
+            border: 1px solid $color_primary;
+            color: $color_primary;
+        }
+    }
+    
+    &.primary{
+        border: 1px solid $color_primary;
+        background: $color_primary;
+        color: $color_basic_white;
+
+        &:hover{
+            filter: brightness(1.2);
+        }
+    }
+
+    &.default{
+        border: none;
+        background: none;
+        color: $color_text_default;
+
+        &:hover{
+            background: $color_basic_lightgrey;
+        }
+    }
+
+    &.primary-outline{
+        border: 1px solid $color_primary;
+        background: none;
+        color: $color_primary;
+
+        &:hover{
+            background: $color_primary;
+            color: $color_basic_white;
+        }
+    }
+}
