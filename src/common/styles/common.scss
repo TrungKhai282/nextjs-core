@@ -1,0 +1,64 @@
+@import '../fonts/poppins/stylesheet.scss';
+
+// Fonts
+$font_main: 'Poppins', sans-serif;
+
+// Colors
+$color_basic_white: #FFFFFF;
+$color_basic_black: black;
+$color_basic_grey: grey;
+$color_basic_lightgrey: lightgrey;
+$color_fury: #EA553E;
+$color_sunflower: #FECE55;
+$color_black_space_900: #121212;
+$color_black_space_800: #252525;
+$color_black_space_700: #373737;
+$color_black_space_600: #4A4A4A;
+$color_black_space_400: #8C8C8C;
+$color_neutral_600: #6C757D; 
+$color_neutral_900: #212529;
+$color_bluish_purple_100: #F1EAFD;
+$color_megaman_500: #226AFA;
+$color_bluish_600: #692CCE;
+
+// Screen size
+$XXL: 1920px;
+$XL: 1440px;
+$LG: 1280px;
+$MD: 1024px;
+$SM: 768px;
+$XS: 414px;
+$XXS: 320px;
+
+// media queries responsive
+@mixin Responsive($canvas) {
+    @if $canvas == XXS {
+        @media only screen and (max-width: $XXS) {
+            @content;
+        }
+    } @else if $canvas == XS {
+        @media only screen and (max-width: $XS) {
+            @content;
+        }
+    } @else if $canvas == SM {
+        @media only screen and (max-width: $SM) {
+            @content;
+        }
+    } @else if $canvas == MD {
+        @media only screen and (max-width: $MD) {
+            @content;
+        }
+    } @else if $canvas == LG {
+        @media only screen and (max-width: $LG) {
+            @content;
+        }
+    } @else if $canvas == XL {
+        @media only screen and (max-width: $XL) {
+            @content;
+        }
+    } @else if $canvas == XXL {
+        @media only screen and (max-width: $XXL) {
+            @content;
+        }
+    } 
+}
