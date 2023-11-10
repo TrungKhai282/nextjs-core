@@ -1,0 +1,59 @@
+@import '@/common/styles/common.scss';
+
+.dropdown{
+    display: flex;
+    position: relative;
+    width:fit-content;
+    cursor: pointer;
+
+    .icon{
+        width: 20px;
+        height: 20px;
+
+        img,
+        svg{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .menu{
+        display: none;
+        padding: 4px 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        flex-direction: column;
+        background-color: $color_basic_white;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+        min-width: 100%;
+        width: max-content;
+        z-index: 10;
+
+        .item{
+            padding: 12px;
+            margin: 0 4px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+
+            &:hover{
+                background-color: $color_grey_hover;
+            }
+
+            &.disable{
+                filter: opacity(0.5);
+                pointer-events: none;
+                
+                &:hover{
+                    background-color: $color_basic_white;
+                }
+            }
+        }
+    }
+
+    &:hover{
+        .menu{
+            display: flex;
+        }
+    }
+}

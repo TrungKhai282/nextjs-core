@@ -12,12 +12,12 @@ const Text = (props: TextProps) => {
   const { children, className, type, ...elementProps } = props;
 
   return (
-    <p
+    <div
       {...elementProps}
       className={clsx(style.text, style[type ?? "default"], className)}
     >
       {children}
-    </p>
+    </div>
   );
 };
 
