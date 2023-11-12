@@ -1,7 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import style from "./index.module.scss";
 import Dropdown from "@/components/common/dropdown";
+import Button from "../common/button";
 
 const DropdownExample = () => {
   return (
@@ -12,12 +14,14 @@ const DropdownExample = () => {
           items={[
             {
               key: "1",
-              label: "Item1",
+              label: "This is Item 1",
               value: "1",
             },
             {
               key: "2",
-              label: "Item2",
+              label: (
+                <Link href={"/link-to-somewhere"}>Link to some where</Link>
+              ),
               value: "2",
             },
           ]}
@@ -63,12 +67,8 @@ const DropdownExample = () => {
             },
             {
               key: "2",
-              label: "Item2",
+              label: "Item with click action",
               value: "2",
-              onClick: (key, value) => {
-                console.log("key :>> ", key);
-                console.log("value :>> ", value);
-              },
             },
             {
               key: "3",
@@ -79,6 +79,103 @@ const DropdownExample = () => {
           ]}
         >
           Have disable item
+        </Dropdown>
+        <Dropdown
+          items={[
+            {
+              key: "1",
+              label: "Item",
+              value: "1",
+            },
+          ]}
+        >
+          <Button type="outline">Button with dropdown</Button>
+        </Dropdown>
+        <Dropdown
+          items={[
+            {
+              key: "1",
+              label: "This is item",
+              value: "1",
+            },
+          ]}
+          placement="top"
+        >
+          <Button type="outline">Top</Button>
+        </Dropdown>
+        <Dropdown
+          items={[
+            {
+              key: "1",
+              label: "This is item",
+              value: "1",
+            },
+          ]}
+          placement="top-left"
+        >
+          <Button type="outline">Top left</Button>
+        </Dropdown>
+        <Dropdown
+          items={[
+            {
+              key: "1",
+              label: "This is item",
+              value: "1",
+            },
+          ]}
+          placement="top-right"
+        >
+          <Button type="outline">Top right</Button>
+        </Dropdown>
+        <Dropdown
+          items={[
+            {
+              key: "1",
+              label: "This is item",
+              value: "1",
+            },
+          ]}
+          placement="bottom"
+        >
+          <Button type="outline">Bottom</Button>
+        </Dropdown>
+        <Dropdown
+          items={[
+            {
+              key: "1",
+              label: "This is item this is item",
+              value: "1",
+            },
+          ]}
+          placement="bottom-left"
+        >
+          <Button type="outline">Bottom left</Button>
+        </Dropdown>
+        <Dropdown
+          items={[
+            {
+              key: "1",
+              label: "This is item this is item",
+              value: "1",
+            },
+          ]}
+          placement="bottom-right"
+        >
+          <Button type="outline">Bottom right</Button>
+        </Dropdown>
+
+        <Dropdown
+          items={[
+            {
+              key: "1",
+              label: "This dropdown will close if you click outside",
+              value: "1",
+            },
+          ]}
+          click
+          placement="bottom-left"
+        >
+          <Button type="outline">Click me</Button>
         </Dropdown>
       </div>
     </div>

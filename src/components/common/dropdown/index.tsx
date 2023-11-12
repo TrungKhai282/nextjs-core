@@ -1,7 +1,7 @@
 "use client";
 
 import clsx from "clsx";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import style from "./index.module.scss";
 
 type Item = {
@@ -18,15 +18,66 @@ type DropdownProps = {
   className?: string;
   icon?: React.ReactNode;
   items: Item[];
+  placement?:
+    | "top"
+    | "top-left"
+    | "top-right"
+    | "bottom"
+    | "bottom-left"
+    | "bottom-right";
+  click?: boolean;
 };
 
 const Dropdown = (props: DropdownProps) => {
-  const { children, className, icon, items, ...elementProps } = props;
+  const {
+    children,
+    className,
+    icon,
+    items,
+    placement,
+    click,
+    ...elementProps
+  } = props;
+  const [active, setActive] = useState(false);
+  const boxRef = useRef<HTMLDivElement>(null);
+
+  const handleActive = () => !click && setActive(true);
+
+  const handleUnActive = () => !click && setActive(false);
+
+  const handleClickOutside = (e: any) => {
+    if (click && boxRef.current && !boxRef.current.contains(e.target)) {
+      setActive(false);
+    }
+  };
+
+  click && console.log("hello");
+
+  const handleClickInside = () => click && setActive(true);
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  });
+
   return (
-    <div {...elementProps} className={clsx(style.dropdown, className)}>
+    <div
+      {...elementProps}
+      className={clsx(style.dropdown, className)}
+      onMouseOver={handleActive}
+      onMouseOut={handleUnActive}
+      ref={boxRef}
+      onClick={handleClickInside}
+    >
       {children}
       {icon && <div className={style.icon}>{icon}</div>}
-      <div className={style.menu}>
+      <div
+        className={clsx(
+          style.menu,
+          { [style.active]: active },
+          style[placement ?? "bottom"]
+        )}
+      >
         {items.map((item) => {
           return (
             <div

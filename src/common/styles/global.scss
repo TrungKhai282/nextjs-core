@@ -9,6 +9,11 @@ body,
     background-color: $color_basic_white;
     color: $color_basic_black;
     font-size: $font_size_medium;
+
+    a{
+        text-decoration: none;
+        color: $color_text_default;
+    }
 }
 
 body{

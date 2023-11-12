@@ -6,22 +6,16 @@ const ButtomExample = () => {
     <div className={style.exampleContainer}>
       <div className={style.title}>Button:</div>
       <div className={style.exampleRow}>
-        <Button text={"Button default"} className={style.buttonExample} />{" "}
-        <Button
-          type="primary"
-          text={"Button primary"}
-          className={style.buttonExample}
-        />
-        <Button
-          type="primary-outline"
-          text={"Button primary-outline"}
-          className={style.buttonExample}
-        />
-        <Button
-          type="outline"
-          text={"Button outline"}
-          className={style.buttonExample}
-        />
+        <Button className={style.buttonExample}>Button default</Button>
+        <Button type="primary" className={style.buttonExample}>
+          Button primary
+        </Button>
+        <Button type="primary-outline" className={style.buttonExample}>
+          Button primary-outline
+        </Button>
+        <Button type="outline" className={style.buttonExample}>
+          Button outline
+        </Button>
       </div>
     </div>
   );
