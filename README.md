@@ -15,3 +15,11 @@ Depedency:
 - Svg: svg module, next-react-svg
 - axios
 - classname compiler: clsx
+
+If you want to clone this repository into new repository:
+
+```
+// create new repo and cd to, then use:
+
+git pull https://github.com/TrungKhai282/nextjs-core.git main
+```
