@@ -1,0 +1,44 @@
+@import '@/common/styles/common.scss';
+
+.pagination{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    button{
+        border: none;
+        background: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 32px;
+        min-height: 32px;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:hover{
+            background-color: $color_grey_hover;
+        }
+
+        &:disabled{
+            background-color: unset;
+            cursor: no-drop;
+        }
+
+        &.active{
+            border: 1px solid $color_primary;
+            color: $color_primary;
+            &:hover{
+                background-color: unset;
+            }
+        }
+
+        svg{
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    .pageSizeChange{
+        margin-left: 16px;
+    }
+}

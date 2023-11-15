@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import React from "react";
 import "@/common/styles/global.scss";
-import TopLoader from "@/layout-components/top-loader";
+import TopLoader from "@/layout/top-loader";
 
 export const metadata: Metadata = {
   // Change the title app

@@ -47,10 +47,11 @@
         position: absolute;
         flex-direction: column;
         background-color: $color_basic_white;
-        box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+        box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
         min-width: 100%;
         width: max-content;
         z-index: 10;
+        border-radius: 4px;
 
         &.top{
             bottom: 100%;
@@ -89,6 +90,7 @@
             margin: 0 4px;
             cursor: pointer;
             transition: all 0.2s ease;
+            border-radius: 4px;
 
             &:hover{
                 background-color: $color_grey_hover;

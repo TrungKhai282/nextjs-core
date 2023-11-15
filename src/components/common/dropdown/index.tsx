@@ -51,8 +51,6 @@ const Dropdown = (props: DropdownProps) => {
     }
   };
 
-  click && console.log("hello");
-
   const handleClickInside = () => click && setActive(true);
 
   useEffect(() => {
