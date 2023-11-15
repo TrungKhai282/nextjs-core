@@ -7,4 +7,4 @@ export type ResponseType<T> = {
   response: AxiosResponse<T> | undefined;
 };
 
-export type StoreType = CategoryState;
+export type ApiStoreType = CategoryState;

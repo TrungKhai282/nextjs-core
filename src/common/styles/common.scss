@@ -6,29 +6,11 @@ $font_main: 'Poppins', sans-serif;
 // Font-size
 $font_size_medium: 14px;
 
-// Colors
-$color_basic_white: #FFFFFF;
-$color_basic_black: black;
-$color_basic_grey: grey;
-$color_basic_lightgrey: lightgrey;
-$color_fury: #EA553E;
-$color_sunflower: #FECE55;
-$color_black_space_900: #121212;
-$color_black_space_800: #252525;
-$color_black_space_700: #373737;
-$color_black_space_600: #4A4A4A;
-$color_black_space_400: #8C8C8C;
-$color_neutral_600: #6C757D; 
-$color_neutral_900: #212529;
-$color_bluish_purple_100: #F1EAFD;
-$color_megaman_500: #226AFA;
-$color_bluish_600: #692CCE;
-
-//Common color
-$color_primary: $color_fury;
-$color_text_default: $color_basic_black;
-$color_text_secondary: $color_basic_grey;
-$color_grey_hover: rgba(0,0,0,.04);
+// Color
+$color_background_main: white;
+$color_text_main: black;
+$color_light_grey: lightgrey;
+$color_grey: grey;
 
 // Screen size
 $XXL: 1920px;

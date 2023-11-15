@@ -1,17 +1,18 @@
 import NextTopLoader from "nextjs-toploader";
+import * as constants from "./constants";
 
 const TopLoader = () => {
   return (
     <NextTopLoader
-      color="#EA553E"
-      initialPosition={0.08}
-      crawlSpeed={200}
-      height={3}
+      color={constants.COLOR}
+      initialPosition={constants.INITIAL_POSITON}
+      crawlSpeed={constants.CRAWL_SPEED}
+      height={constants.HEIGHT}
       crawl={true}
       showSpinner={false}
-      easing="ease"
-      speed={200}
-      zIndex={1600}
+      easing={constants.EASING}
+      speed={constants.SPEED}
+      zIndex={constants.Z_INDEX}
     />
   );
 };

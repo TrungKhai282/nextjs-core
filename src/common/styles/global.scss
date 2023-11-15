@@ -6,13 +6,13 @@ body,
     padding: 0;
     margin: 0;
     font-family: $font_main;
-    background-color: $color_basic_white;
-    color: $color_basic_black;
+    background-color: $color_background_main;
+    color: $color_text_main;
     font-size: $font_size_medium;
 
     a{
         text-decoration: none;
-        color: $color_text_default;
+        color: $color_text_main;
     }
 }
 
@@ -35,13 +35,13 @@ body{
         background-clip: content-box;
     
         &:hover{
-            background-color: color_basic_lightgrey !important;
+            background-color: $color_light_grey !important;
         }
     }
     
     :hover{
         ::-webkit-scrollbar-thumb{
-            background-color: $color_basic_grey;
+            background-color: $color_grey;
         }
     }
 }
